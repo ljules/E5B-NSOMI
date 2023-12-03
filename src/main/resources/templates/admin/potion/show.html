@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head th:replace="mesFragments :: fragHead">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="vh-100">
+    <nav th:replace="mesFragments :: fragNav"></nav>
+    <main class="container">
+        <h1 th:text="'' + ${potion.nom}"></h1>
+        <ul>
+            <li th:text="'Nom : '+ ${potion.nom}"></li>
+            <li th:text="'Description : '+${potion.description}"></li>
+            <li th:text="'Soin : '+${potion.soin}"></li>
+            <!-- Ajoutez d'autres champs de la potion selon vos besoins -->
+            <li th:text="'Chemin de l\'image : '+${potion.cheminImage}"></li>
+        </ul>
+    </main>
+</div>
+<footer th:replace="mesFragments :: fragFooter"></footer>
+</body>
+</html>
