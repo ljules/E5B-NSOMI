@@ -17,6 +17,7 @@ Permettre au joueur de choisir une armure parmi la liste complète de toutes les
 
 Voici ce que j'ai fait pour la B:
 
+j'ai ajouté un attribut armure a mon controleur et armureDAO pour acceder a tout les elements sde l'armure
 
 
 ```kotlin
@@ -35,13 +36,13 @@ Voici ce que j'ai fait pour la B:
         model.addAttribute("armures", armures)
         return "joueur/personnage/create"
     }
+}
 ```
 
 ```html
 <li class="list-group-item">
 Armure :
     <div th:if="${personnage.armureEquipee!=null}"
-    th:style="'color :'+${personnage.armureEquipee.qualite.getCouleur()}"
     th:text="${personnage.armureEquipee.nom}"></div>
         <div th:unless="${personnage.armureEquipee!=null}">Pas d'armure</div>
     </li>
@@ -71,7 +72,7 @@ Voici ce que j'ai fait pour la C:
 </body>
 </html>
 ```
-Voici la modification a faire dans le controller
+Voici la modification a faire dans le controller de Potion
 
 ```kotlin
 @GetMapping("/admin/potion/{id}")

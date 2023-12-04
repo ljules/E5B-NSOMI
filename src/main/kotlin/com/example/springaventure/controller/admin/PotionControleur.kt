@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
-
 /**
  * Contrôleur responsable de la gestion des potions dans la partie administrative de l'application.
  */

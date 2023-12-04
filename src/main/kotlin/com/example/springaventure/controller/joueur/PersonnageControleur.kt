@@ -1,5 +1,4 @@
 package com.example.springaventure.controller.joueur
-
 import com.example.springaventure.model.dao.ArmureDao
 import com.example.springaventure.model.dao.PersonnageDao
 import com.example.springaventure.model.dao.UtilisateurDao
@@ -37,9 +36,7 @@ class PersonnageControleur(
         val email: String = authentication.getName()
         // Récupérer l'utilisateur
         val utilisateur = utilisateurDao.findByEmail(email)!!
-
         val personnages = this.personnageDao.findByUtilisateur_IdOrderByIdDesc(utilisateur.id!!)
-
         model.addAttribute("personnages", personnages)
         return "joueur/personnage/index"
     }

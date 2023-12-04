@@ -39,16 +39,8 @@
                     </ul>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            Arme :
-                            <div th:if="${personnage.armeEquipee!=null}"
-                                 th:style="'color :'+${personnage.armeEquipee.qualite.getCouleur()}"
-                                 th:text="${personnage.armeEquipee.nom}"></div>
-                            <div th:unless="${personnage.armeEquipee!=null}">Pas d'arme</div>
-                        </li>
-                        <li class="list-group-item">
                             Armure :
                             <div th:if="${personnage.armureEquipee!=null}"
-                                 th:style="'color :'+${personnage.armureEquipee.qualite.getCouleur()}"
                                  th:text="${personnage.armureEquipee.nom}"></div>
                             <div th:unless="${personnage.armureEquipee!=null}">Pas d'armure</div>
                         </li>
