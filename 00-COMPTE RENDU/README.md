@@ -69,10 +69,12 @@ Voici ce que j'ai fait pour la C:
     </div>
     <footer></footer>
 </body>
-</html>```
+</html>
+```
+Voici la modification a faire dans le controller
 
-
-```@GetMapping("/admin/potion/{id}")
+```kotlin
+@GetMapping("/admin/potion/{id}")
     fun show(@PathVariable id: Long, model: Model): String {
         // Récupère la potion avec l'ID spécifié depuis la base de données
         val unePotion = this.potionDao.findById(id).orElseThrow()
@@ -82,5 +84,5 @@ Voici ce que j'ai fait pour la C:
 
         // Retourne le nom de la vue à afficher
         return "admin/potion/show"
-    }```
-
+    }
+```
